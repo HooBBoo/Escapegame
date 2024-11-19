@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e3074e5-d382-4b35-9197-8dbfe3bf20b9" name="변경" comment="" />
+    <list default="true" id="4e3074e5-d382-4b35-9197-8dbfe3bf20b9" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Escapegame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Escapegame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestC.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestC.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UITestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UITestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/TriggerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/TriggerManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +42,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "LeeJiYun",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "JaeMinBranch",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,6 +74,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -78,6 +87,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -94,6 +106,7 @@
       <updated>1731980266189</updated>
       <workItem from="1731980267974" duration="15000" />
       <workItem from="1732002167556" duration="608000" />
+      <workItem from="1732004456019" duration="1534000" />
     </task>
     <servers />
   </component>
