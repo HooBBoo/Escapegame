@@ -32,15 +32,15 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; // Ŀ�� ������ �ʰ�
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void FixedUpdate() // ��������(rigid body)�� ����� ������ ������ �������� ������Ʈ �Ǿ�� �ؼ� (������ ������?)
+    void FixedUpdate()
     {
         Move();
     }
 
-    private void LateUpdate() // ��� Update�� �Ϸ�� �� ���������� ���󰡰� �ϱ� ����. ī�޶� ���� ����������.
+    private void LateUpdate()
     {
         if (canLook)
         {
