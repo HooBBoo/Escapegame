@@ -7686,7 +7686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8d0198743fa3047a50f6090d9c1f3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportPosition: {fileID: 4881765179608797504}
+  teleportPosition: {fileID: 1282588743}
   applyYRotationOffset: 1
   invertZOffset: 1
 --- !u!65 &798797228
