@@ -276,7 +276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportPosition: {fileID: 212700428}
-  zOffset: 0
+  applyYRotationOffset: 0
+  invertZOffset: 0
 --- !u!65 &5680674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6170,6 +6171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69e816bc36e7cd488034d6e7927eb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievementUI: {fileID: 2095651931}
 --- !u!114 &660549004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6196,6 +6198,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achievementAnimator: {fileID: 2095651930}
+  achievementText: {fileID: 1223903359}
+  achievementImage: {fileID: 1881990836}
   displayDuration: 2
 --- !u!1 &661798794
 GameObject:
@@ -19645,6 +19649,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achievementAnimator: {fileID: 2095651930}
+  achievementText: {fileID: 1223903359}
+  achievementImage: {fileID: 1881990836}
   displayDuration: 2
 --- !u!1 &2104865954
 GameObject:
@@ -33561,16 +33567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa0061c428d60941aeb1fcb2a1e9987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpPower: 0
-  groundLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  cameraContainer: {fileID: 6925202267492160808}
-  minXLook: -85
-  maxXLook: 85
-  lookSensitivity: 0.1
-  canLook: 1
 --- !u!33 &9132935811607320833
 MeshFilter:
   m_ObjectHideFlags: 0

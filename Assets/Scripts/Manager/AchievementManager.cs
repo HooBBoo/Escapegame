@@ -3,9 +3,12 @@ using UnityEngine;
 
 public class AchievementManager : MonoBehaviour
 {
+    [SerializeField]
+    private AchievementUI achievementUI;
     // 업적을 딕셔너리로 관리
     private Dictionary<EAchievementCode, List<Achievement>> achievements = new Dictionary<EAchievementCode, List<Achievement>>();
     
+    // 업적이 달성 되기 위한 추가 과정
     public void IncreseAchievement(EAchievementCode code)
     {
 
@@ -15,7 +18,16 @@ public class AchievementManager : MonoBehaviour
 
             foreach (Achievement achievement in list) 
             {
-                achievement.curvalue++;
+                if (!achievement.isCompleted) 
+                {
+                    achievement.IncrementProgress();
+
+                    if (achievement.IsComplete())
+                    {
+                        achievement.isCompleted = true; // 완료 상태 업데이트
+                        ShowAchievementUI(achievement);
+                    }
+                }
             }
         }
     }
@@ -33,65 +45,38 @@ public class AchievementManager : MonoBehaviour
 
     public void InitializeAchievements()
     {
-        // 업적 1 생성
-        Achievement achievement1 = new Achievement
-        {
-            name = "3연속 통과 성공",
-            value = 3,
-            curvalue = 0,
-            count = 0,
-            code = EAchievementCode.PassSuccess
-        };
-
-        // 업적 2 생성
-        Achievement achievement2 = new Achievement
-        {
-            name = "올 클리어, 통과 성공",
-            value = 6,
-            curvalue = 0,
-            count = 0,
-            code = EAchievementCode.PassSuccess
-        };
-
-        // 업적 3 생성
-        Achievement achievement3 = new Achievement
-        {
-            name = "조명 관련 업적입니다.",
-            value = 1,
-            curvalue = 0,
-            count = 0,
-            code = EAchievementCode.Lighting
-        };
-
-
         // 딕셔너리에 추가
-        AddAchievement(achievement1);
-        AddAchievement(achievement2);
-        AddAchievement(achievement3);
+        //AddAchievement(new Achievement( "4연속 통과 성공", 4, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
+        //AddAchievement(new Achievement("올 클리어!", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
+        //AddAchievement(new Achievement("3연속 통과 실패", 3, 0, EAchievementCode.PassFail, "Sprites/Exitfail"));
+        //AddAchievement(new Achievement("타임어택 업적입니다.", 0, 15, EAchievementCode.TimeAttack, "Sprites/Time"));
+        //AddAchievement(new Achievement("오디오가 재생되고 클리어 되면 깨는 업적입니다.", 1, 0, EAchievementCode.AudioClip, "Sprites/Manager"));
+        //AddAchievement(new Achievement("조명 관련 업적입니다.", 1, 0, EAchievementCode.Lighting, "Sprites/Light"));
+        AddAchievement(new Achievement("나는 이 코드를 완벽히 이해했나?", 1, 0, EAchievementCode.PassSuccess, "Sprites/Light"));
+        AddAchievement(new Achievement("못한거면 어쩌지", 3, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
+        AddAchievement(new Achievement("코드짜는게 제일 어려워", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
+
     }
 
-    public void ShowAchievementUI()
-    {
 
-    }
-
-    public void PrintAllAchievements()
+    public void ShowAchievementUI(Achievement achievement)
     {
-        foreach (var pair in achievements)
-        {
-            Debug.Log($"업적 코드: {pair.Key}, 업적 개수: {pair.Value.Count}");
-            foreach (Achievement achievement in pair.Value)
-            {
-                //Debug.Log($" - {achievement.name}: {achievement.curvalue}/{achievement.value}");
-            }
-        }
+        achievementUI.ShowAchievementUI(achievement, achievement.imagePath);
     }
 
     // 유니티에서 시작할 때 호출
     void Start()
     {
         InitializeAchievements(); // 업적 초기화
-        PrintAllAchievements(); // 디버그용 데이터 출력
+    }
+
+    void Update()
+    {
+        // 숫자 1 키가 눌렸을 때 curvalue 증가
+        if (Input.GetKeyDown(KeyCode.Space))// 숫자 1 키
+        {
+            IncreseAchievement(EAchievementCode.PassSuccess); // PassSuccess 업적 증가
+        }
     }
 }
 
