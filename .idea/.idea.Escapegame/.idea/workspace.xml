@@ -6,6 +6,85 @@
   <component name="ChangeListManager">
     <list default="true" id="4e3074e5-d382-4b35-9197-8dbfe3bf20b9" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Escapegame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Escapegame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Classic_fluorescent_lamp.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Classic_fluorescent_lamp.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Maps (Specular) [Unity].meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_ao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_ao.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_diffuse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_diffuse.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_emissive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_emissive.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_specular.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_specular.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Materials/Classic_fluorescent_lamp.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Materials/Classic_fluorescent_lamp.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Example.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Example/ExampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Example/ExampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Example/M_Example.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Example/M_Example.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Large_round_lamp.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Large_round_lamp.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity].meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Clean.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Clean/Large_round_lamp_ao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Clean/Large_round_lamp_ao.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Clean/Large_round_lamp_diffuse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Clean/Large_round_lamp_diffuse.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Clean/Large_round_lamp_emissive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Clean/Large_round_lamp_emissive.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Clean/Large_round_lamp_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Clean/Large_round_lamp_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Clean/Large_round_lamp_specular.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Clean/Large_round_lamp_specular.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Scratched.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Scratched/Large_round_lamp_ao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Scratched/Large_round_lamp_ao.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Scratched/Large_round_lamp_diffuse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Scratched/Large_round_lamp_diffuse.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Scratched/Large_round_lamp_emissive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Scratched/Large_round_lamp_emissive.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Scratched/Large_round_lamp_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Scratched/Large_round_lamp_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Scratched/Large_round_lamp_specular.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Maps (Specular) [Unity]/Scratched/Large_round_lamp_specular.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Materials/Large round lamp Scratched.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Materials/Large round lamp Scratched.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Materials/Large round lamp.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Large round lamp/Materials/Large round lamp.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Prefabs/Classic_fluorescent_lamp.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Prefabs/Classic_fluorescent_lamp.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Prefabs/Large_round_lamp.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Prefabs/Large_round_lamp.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Prefabs/Small_roof_lamp.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Prefabs/Small_roof_lamp.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Maps (Specular) [Unity].meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Maps (Specular) [Unity]/Small_roof_lamp_ao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Maps (Specular) [Unity]/Small_roof_lamp_ao.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Maps (Specular) [Unity]/Small_roof_lamp_diffuse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Maps (Specular) [Unity]/Small_roof_lamp_diffuse.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Maps (Specular) [Unity]/Small_roof_lamp_emissive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Maps (Specular) [Unity]/Small_roof_lamp_emissive.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Maps (Specular) [Unity]/Small_roof_lamp_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Maps (Specular) [Unity]/Small_roof_lamp_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Maps (Specular) [Unity]/Small_roof_lamp_specular.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Maps (Specular) [Unity]/Small_roof_lamp_specular.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Materials/Small roof lamp.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Materials/Small roof lamp.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Small_roof_lamp.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Solution Studio/PBR Lamps Pack/Small roof lamp/Small_roof_lamp.FBX.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapTestScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerZone.cs" afterDir="false" />
     </list>
@@ -38,18 +117,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "LeeJiYun",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;LeeJiYun&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
