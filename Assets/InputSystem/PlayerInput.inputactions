@@ -24,7 +24,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Jump",
+                    "name": "Run",
                     "type": "Button",
                     "id": "21aa54db-f126-4b1a-abbb-8f51f8de3c1c",
                     "expectedControlType": "Button",
@@ -121,11 +121,11 @@
                 {
                     "name": "",
                     "id": "e23ac242-9bf4-45d5-9e38-ffc7035c0caf",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "Run",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
