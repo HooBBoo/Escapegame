@@ -27,7 +27,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _ColorTexture:
-        m_Texture: {fileID: 2800000, guid: c134d51148e596a4eb4216de4b6777be, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5b3fdf2de380d134baaeaa0906eb64d1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emission_Map:
@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
-        m_Texture: {fileID: 2800000, guid: dda5797e0dfb09d48b28a30f7976e48b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 68870d9c1d8ccda48be2c9d7f53359df, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RGB_Mask:
@@ -67,7 +67,7 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _CastShadows: 1
-    - _ColorOverlayOpacity: 0
+    - _ColorOverlayOpacity: 0.216
     - _Cull: 2
     - _CustomColor: 1
     - _DstBlend: 0
@@ -85,7 +85,7 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _Blue_Area_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _ColorOverlay: {r: 1, g: 1, b: 1, a: 0}
+    - _ColorOverlay: {r: 0, g: 0, b: 0, a: 0}
     - _Emission_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Green_Area_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Red_Area_Color: {r: 1, g: 1, b: 1, a: 0}
