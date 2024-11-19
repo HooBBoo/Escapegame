@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TriggerZone : MonoBehaviour
@@ -11,6 +8,8 @@ public class TriggerZone : MonoBehaviour
     public bool invertZOffset = false; // z축 반전이 필요한 트리거
     //public float zOffset = 0f; // 보정이 필요하게 되면 조정
 
+    public TriggerType TriggerType; //어떤 존인지 확인
+    
     // 플레이어 Teleport
     public void TeleportPlayer(Transform playerTransform)
     {
@@ -46,7 +45,7 @@ public class TriggerZone : MonoBehaviour
         if (hitobject.CompareTag("TestPlayer"))
         {
             Transform playerTransform = hitobject.transform;
-            TeleportPlayer(playerTransform);
+            TriggerManager.Instance.CorrectTriggerZone(this, playerTransform);
         }
     }
 }

@@ -17,13 +17,14 @@ public class UIManager : Singleton<UIManager>
     {
         elapsedTime += Time.deltaTime; // 매 프레임 경과된 시간 추가
         UITimeUpdate();
+        UINumberUpdate();
     }
 
     //숫자가 올라가는 로직 작성
-    public void UINumberUpdate()
+    private void UINumberUpdate()
     {
-        //현재 상태에 맞는 트리거에 들어가면 1증가
-        //그게아니면 다시 0으로 초기화
+        string floor = TriggerManager.Instance.currentfloor.ToString();
+        numberText.text = floor;
     }
     
     //시간 분초 나타내기
