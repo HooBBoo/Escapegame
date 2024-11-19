@@ -8,7 +8,7 @@ public enum AudioCategory
     SFX
 }
 
-public class SoundManager : MonoBehaviour
+public class SoundManager : Singleton<SoundManager>
 {
     private AudioSource sfxSource;
     private AudioSource walkSource;
@@ -25,7 +25,7 @@ public class SoundManager : MonoBehaviour
 
     public List<AudioData> audioDataList;
 
-    private void Awake()
+    private new void Awake()
     {
         sfxSource = GetComponent<AudioSource>();
         walkSource = GetComponent<AudioSource>();
@@ -44,7 +44,8 @@ public class SoundManager : MonoBehaviour
         {
             if (audioDataList[i].audioCategory == AudioCategory.SFX)
             {
-                EventBus.Subscribe(audioDataList[i].eventName, () => SfxPlay(audioDataList[i].eventName));
+                var i1 = i;
+                EventBus.Subscribe(audioDataList[i].eventName, () => SfxPlay(audioDataList[i1].eventName));
             }
         }
     }
