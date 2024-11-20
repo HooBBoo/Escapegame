@@ -39,12 +39,14 @@ public class TriggerManager : Singleton<TriggerManager>
                 floorReset();
             }
         }
+        
         triggerZone.TeleportPlayer(playerTransform);
     }
 
     private void floorUp()
     {
         currentfloor++;
+        UIManager.Instance.UINumberUpdate();
     }
 
     private void floorReset()

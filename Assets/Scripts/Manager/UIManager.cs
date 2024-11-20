@@ -17,11 +17,11 @@ public class UIManager : Singleton<UIManager>
     {
         elapsedTime += Time.deltaTime; // 매 프레임 경과된 시간 추가
         UITimeUpdate();
-        UINumberUpdate();
+        
     }
 
     //숫자가 올라가는 로직 작성
-    private void UINumberUpdate()
+    public void UINumberUpdate()
     {
         string floor = TriggerManager.Instance.currentfloor.ToString();
         numberText.text = floor;
