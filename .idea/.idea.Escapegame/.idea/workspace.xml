@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e3074e5-d382-4b35-9197-8dbfe3bf20b9" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Escapegame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Escapegame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Black.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Brown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Brown.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Coffe.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Coffe.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Milk.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Milk.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Venge.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Venge.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_White.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Yellow.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Example/M_Example.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Example/M_Example.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Large round lamp/Materials/Large round lamp Scratched.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Large round lamp/Materials/Large round lamp Scratched.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Small roof lamp/Materials/Small roof lamp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Small roof lamp/Materials/Small roof lamp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Externals/BackRoom/BackroomsLikeAsset/material/Ceiling_Office_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/BackRoom/BackroomsLikeAsset/material/Ceiling_Office_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Externals/BackRoom/BackroomsLikeAsset/material/Floor_Carpet_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/BackRoom/BackroomsLikeAsset/material/Floor_Carpet_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Externals/BackRoom/BackroomsLikeAsset/material/Wall_Painted_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/BackRoom/BackroomsLikeAsset/material/Wall_Painted_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Externals/BackRoom/BackroomsLikeAsset/material/Wall_trim_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/BackRoom/BackroomsLikeAsset/material/Wall_trim_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Externals/SocketsAndSwitches/Material/512x512/White/LightSwitchesMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/SocketsAndSwitches/Material/512x512/White/LightSwitchesMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Externals/SocketsAndSwitches/Material/512x512/White/Socket02Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/SocketsAndSwitches/Material/512x512/White/Socket02Material.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapTestScene/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapTestScene/Global Volume Profile.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +108,7 @@
       <workItem from="1732067307040" duration="17000" />
       <workItem from="1732067395552" duration="326000" />
       <workItem from="1732068331298" duration="445000" />
+      <workItem from="1732102128260" duration="619000" />
     </task>
     <servers />
   </component>
