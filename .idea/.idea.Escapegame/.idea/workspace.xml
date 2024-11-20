@@ -6,17 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4e3074e5-d382-4b35-9197-8dbfe3bf20b9" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Escapegame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Escapegame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Black.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Brown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Brown.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Coffe.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Coffe.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Milk.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Milk.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Venge.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Venge.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_White.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/Free Wood Door Pack/Materials/Door_1_Materials/Door_1_Yellow.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Example/M_Example.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Example/M_Example.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Large round lamp/Materials/Large round lamp Scratched.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Large round lamp/Materials/Large round lamp Scratched.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Small roof lamp/Materials/Small roof lamp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Small roof lamp/Materials/Small roof lamp.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Externals/SocketsAndSwitches/SRP UpgradePackage/Built-in_Material.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Externals/SocketsAndSwitches/SRP UpgradePackage/URP_Material.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UITestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UITestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/TriggerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/TriggerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerZone.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +32,12 @@
     &quot;accountId&quot;: &quot;e784eb36-96d2-4581-8a14-a5eee3708027&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/Object.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Trigger/FrontTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Trigger/MapTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.27/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -47,18 +47,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;LeeJiYun&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "JaeMinBranch",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
@@ -81,6 +83,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -91,6 +96,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -112,6 +120,7 @@
       <workItem from="1732067307040" duration="17000" />
       <workItem from="1732067395552" duration="326000" />
       <workItem from="1732068331298" duration="445000" />
+      <workItem from="1732081230852" duration="10240000" />
     </task>
     <servers />
   </component>
