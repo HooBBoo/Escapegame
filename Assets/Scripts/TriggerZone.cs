@@ -8,7 +8,35 @@ public class TriggerZone : MonoBehaviour
     public bool invertZOffset = false; // Z축 반전이 필요한 트리거: Y축 회전과 세트
     //public float zOffset = 0f; // 보정이 필요하게 되면 조정
 
-    public TriggerType TriggerType; //어떤 존인지 확인
+    public TriggerType triggerType; //어떤 존인지 확인
+    private ITriggerAction triggerAction; // 트리거 동작을 처리할 인터페이스
+    
+    private void Start()
+    {
+        // TriggerType에 따라 적절한 TriggerAction을 할당
+        switch (triggerType)
+        {
+            case TriggerType.FrontTrigger:
+                triggerAction = new FrontTrigger();
+                break;
+            case TriggerType.BackTrigger:
+                triggerAction = new BackTrigger();
+                break;
+            case TriggerType.MapTrigger:
+                triggerAction = new MapTrigger();
+                break;
+        }
+    }
+    
+    // 플레이어가 트리거에 들어갔을 때
+    private void OnTriggerEnter(Collider hitobject)
+    {
+        if (hitobject.CompareTag("TestPlayer"))
+        {
+            Transform playerTransform = hitobject.transform;
+            triggerAction.ExecuteTrigger(playerTransform, this); 
+        }
+    }
     
     // 플레이어 Teleport
     public void TeleportPlayer(Transform playerTransform)
@@ -38,14 +66,5 @@ public class TriggerZone : MonoBehaviour
             );
         }
     }
-
-    // 플레이어가 트리거에 들어갔을 때
-    private void OnTriggerEnter(Collider hitobject)
-    {
-        if (hitobject.CompareTag("TestPlayer"))
-        {
-            Transform playerTransform = hitobject.transform;
-            TriggerManager.Instance.CorrectTriggerZone(this, playerTransform);
-        }
-    }
+  
 }
