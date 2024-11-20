@@ -278,6 +278,7 @@ MonoBehaviour:
   teleportPosition: {fileID: 212700428}
   applyYRotationOffset: 0
   invertZOffset: 0
+  triggerType: 0
 --- !u!65 &5680674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19651,7 +19652,7 @@ MonoBehaviour:
   achievementAnimator: {fileID: 2095651930}
   achievementText: {fileID: 1223903359}
   achievementImage: {fileID: 1881990836}
-  displayDuration: 2
+  displayDuration: 4
 --- !u!1 &2104865954
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,11 +5,11 @@ public class AchievementManager : Singleton<AchievementManager>
 {
     [SerializeField]
     private AchievementUI achievementUI;
-    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å³Ê¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    // ¾÷ÀûÀ» µñ¼Å³Ê¸®·Î °ü¸®
     private Dictionary<EAchievementCode, List<Achievement>> achievements = new Dictionary<EAchievementCode, List<Achievement>>();
     
-    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ ï¿½Ç±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½
-    public void IncreseAchievement(EAchievementCode code)
+    // ¾÷ÀûÀÌ ´Þ¼º µÇ±â À§ÇÑ Ãß°¡ °úÁ¤
+    public void IncreseAchievement(EAchievementCode code, float time = 0)
     {
 
         if (achievements.ContainsKey(code))
@@ -18,18 +18,37 @@ public class AchievementManager : Singleton<AchievementManager>
 
             foreach (Achievement achievement in list) 
             {
+                if (time != 0 && achievement.count >= time)
+                {
+                    continue;
+                }
+                if (code == EAchievementCode.PassFail) { ResetPassAchievement(); }
                 if (!achievement.isCompleted) 
                 {
                     achievement.IncrementProgress();
 
-                    if (achievement.IsComplete())
+                    if (achievement.isCompleted)
                     {
-                        achievement.isCompleted = true; // ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
                         ShowAchievementUI(achievement);
                     }
                 }
             }
         }
+    }
+
+    public void ResetPassAchievement() 
+    {
+        if(!achievements.ContainsKey(EAchievementCode.PassSuccess))
+        {
+            return;
+        }
+        List<Achievement> list = achievements[EAchievementCode.PassSuccess];
+
+        foreach (Achievement achievement in list)
+        {
+            achievement.curvalue = 0;
+        }
+        
     }
 
     public void AddAchievement(Achievement achievement)
@@ -39,22 +58,22 @@ public class AchievementManager : Singleton<AchievementManager>
             achievements[achievement.code] = new List<Achievement>();
         }
         achievements[achievement.code].Add(achievement);
-        Debug.Log($"ï¿½ï¿½ï¿½ï¿½ '{achievement.name}'ï¿½ï¿½(ï¿½ï¿½) '{achievement.code}' ï¿½Úµå¿¡ ï¿½ß°ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+        Debug.Log($"¾÷Àû '{achievement.name}'ÀÌ(°¡) '{achievement.code}' ÄÚµå¿¡ Ãß°¡µÇ¾ú½À´Ï´Ù.");
 
     }
 
     public void InitializeAchievements()
     {
-        // ï¿½ï¿½Å³Ê¸ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
-        AddAchievement(new Achievement( "4ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½", 4, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
-        //AddAchievement(new Achievement("ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½!", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
-        //AddAchievement(new Achievement("3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½", 3, 0, EAchievementCode.PassFail, "Sprites/Exitfail"));
-        //AddAchievement(new Achievement("Å¸ï¿½Ó¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.", 0, 15, EAchievementCode.TimeAttack, "Sprites/Time"));
-        //AddAchievement(new Achievement("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.", 1, 0, EAchievementCode.AudioClip, "Sprites/Manager"));
-        //AddAchievement(new Achievement("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.", 1, 0, EAchievementCode.Lighting, "Sprites/Light"));
-        AddAchievement(new Achievement("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Úµå¸¦ ï¿½Ïºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½?", 1, 0, EAchievementCode.PassSuccess, "Sprites/Light"));
-        AddAchievement(new Achievement("ï¿½ï¿½ï¿½Ñ°Å¸ï¿½ ï¿½ï¿½Â¼ï¿½ï¿½", 3, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
-        AddAchievement(new Achievement("ï¿½Úµï¿½Â¥ï¿½Â°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
+        // µñ¼Å³Ê¸®¿¡ Ãß°¡
+        AddAchievement(new Achievement("4¿¬¼Ó Åë°ú ¼º°ø", 4, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
+        AddAchievement(new Achievement("¿Ã Å¬¸®¾î!", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
+        AddAchievement(new Achievement("3¿¬¼Ó Åë°ú ½ÇÆÐ", 3, 0, EAchievementCode.PassFail, "Sprites/Exitfail"));
+        AddAchievement(new Achievement("Å¸ÀÓ¾îÅÃ ¾÷ÀûÀÔ´Ï´Ù.", 0, 15, EAchievementCode.TimeAttack, "Sprites/Time"));
+        AddAchievement(new Achievement("¿Àµð¿À°¡ Àç»ýµÇ°í Å¬¸®¾î µÇ¸é ±ú´Â ¾÷ÀûÀÔ´Ï´Ù.", 1, 0, EAchievementCode.AudioClip, "Sprites/Manager"));
+        AddAchievement(new Achievement("Á¶¸í °ü·Ã ¾÷ÀûÀÔ´Ï´Ù.", 1, 0, EAchievementCode.Lighting, "Sprites/Light"));
+        //AddAchievement(new Achievement("³ª´Â ÀÌ ÄÚµå¸¦ ¿Ïº®È÷ ÀÌÇØÇß³ª?", 1, 0, EAchievementCode.PassSuccess, "Sprites/Light"));
+        //AddAchievement(new Achievement("¸øÇÑ°Å¸é ¾îÂ¼Áö", 3, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
+        //AddAchievement(new Achievement("ÄÚµåÂ¥´Â°Ô Á¦ÀÏ ¾î·Á¿ö", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
 
     }
 
@@ -64,18 +83,18 @@ public class AchievementManager : Singleton<AchievementManager>
         achievementUI.ShowAchievementUI(achievement, achievement.imagePath);
     }
 
-    // ï¿½ï¿½ï¿½ï¿½Æ¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½
+    // À¯´ÏÆ¼¿¡¼­ ½ÃÀÛÇÒ ¶§ È£Ãâ
     void Start()
     {
-        InitializeAchievements(); // ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
+        InitializeAchievements(); // ¾÷Àû ÃÊ±âÈ­
     }
 
     void Update()
     {
-        // ï¿½ï¿½ï¿½ï¿½ 1 Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ curvalue ï¿½ï¿½ï¿½ï¿½
-        if (Input.GetKeyDown(KeyCode.Space))// ï¿½ï¿½ï¿½ï¿½ 1 Å°
+        // ¼ýÀÚ 1 Å°°¡ ´­·ÈÀ» ¶§ curvalue Áõ°¡
+        if (Input.GetKeyDown(KeyCode.Space))// ¼ýÀÚ 1 Å°
         {
-            IncreseAchievement(EAchievementCode.PassSuccess); // PassSuccess ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            IncreseAchievement(EAchievementCode.PassSuccess); // PassSuccess ¾÷Àû Áõ°¡
         }
     }
 }
@@ -87,5 +106,5 @@ public class AchievementManager : Singleton<AchievementManager>
 //    achievement.value++;
 //}
 
-// 1. ï¿½ï¿½Å³Ê¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ß°ï¿½ï¿½Ñ´ï¿½. 2. ï¿½Ì¹ï¿½ ï¿½ß´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½È³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ï¿½Ñ´ï¿½.
-// ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½ UIï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+// 1. µñ¼Å³Ê¸®¿¡ ¾÷Àû µ¥ÀÌÅÍ¸¦ Ãß°¡ÇÑ´Ù. 2. ÀÌ¹Ì Çß´ø ¾÷ÀûÀº ´õ ÀÌ»ó ¾È³ª¿À°Ô ÇØ¾ßÇÑ´Ù.
+// ±×´ÙÀ½¿¡ UI¿¡ ¶ç¿ì¸é ¿Ïº®ÇØÁø´Ù.
