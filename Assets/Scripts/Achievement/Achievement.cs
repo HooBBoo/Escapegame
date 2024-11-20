@@ -1,5 +1,6 @@
 
 using System.Diagnostics;
+using UnityEngine.SocialPlatforms.Impl;
 
 public enum EAchievementCode
 {
@@ -22,24 +23,20 @@ public class Achievement
 
 
 
-    public bool IsComplete()
+    public void Complete()
     {
-        if ( curvalue >= value)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        isCompleted = true;
     }
 
     public void IncrementProgress()
     {
-        if (!IsComplete())
+        curvalue++;
+
+        if (curvalue >= value)
         {
-            curvalue++;
+            Complete();
         }
+
     }
 
     public Achievement(string name, int value, float count, EAchievementCode code, string imagePath)

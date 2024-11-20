@@ -1,6 +1,5 @@
 
 //몇 홀 인지 나타내는 UI, 타이머 UI, 
-
 using TMPro;
 
 public class UIManager : Singleton<UIManager>

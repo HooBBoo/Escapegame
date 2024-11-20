@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AchievementManager : MonoBehaviour
+public class AchievementManager : Singleton<AchievementManager>
 {
     [SerializeField]
     private AchievementUI achievementUI;
@@ -9,7 +9,7 @@ public class AchievementManager : MonoBehaviour
     private Dictionary<EAchievementCode, List<Achievement>> achievements = new Dictionary<EAchievementCode, List<Achievement>>();
     
     // 업적이 달성 되기 위한 추가 과정
-    public void IncreseAchievement(EAchievementCode code)
+    public void IncreseAchievement(EAchievementCode code, float time = 0)
     {
 
         if (achievements.ContainsKey(code))
@@ -18,18 +18,37 @@ public class AchievementManager : MonoBehaviour
 
             foreach (Achievement achievement in list) 
             {
+                if (time != 0 && achievement.count >= time)
+                {
+                    continue;
+                }
+                if (code == EAchievementCode.PassFail) { ResetPassAchievement(); }
                 if (!achievement.isCompleted) 
                 {
                     achievement.IncrementProgress();
 
-                    if (achievement.IsComplete())
+                    if (achievement.isCompleted)
                     {
-                        achievement.isCompleted = true; // 완료 상태 업데이트
                         ShowAchievementUI(achievement);
                     }
                 }
             }
         }
+    }
+
+    public void ResetPassAchievement() 
+    {
+        if(!achievements.ContainsKey(EAchievementCode.PassSuccess))
+        {
+            return;
+        }
+        List<Achievement> list = achievements[EAchievementCode.PassSuccess];
+
+        foreach (Achievement achievement in list)
+        {
+            achievement.curvalue = 0;
+        }
+        
     }
 
     public void AddAchievement(Achievement achievement)
@@ -46,15 +65,15 @@ public class AchievementManager : MonoBehaviour
     public void InitializeAchievements()
     {
         // 딕셔너리에 추가
-        //AddAchievement(new Achievement( "4연속 통과 성공", 4, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
-        //AddAchievement(new Achievement("올 클리어!", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
-        //AddAchievement(new Achievement("3연속 통과 실패", 3, 0, EAchievementCode.PassFail, "Sprites/Exitfail"));
-        //AddAchievement(new Achievement("타임어택 업적입니다.", 0, 15, EAchievementCode.TimeAttack, "Sprites/Time"));
-        //AddAchievement(new Achievement("오디오가 재생되고 클리어 되면 깨는 업적입니다.", 1, 0, EAchievementCode.AudioClip, "Sprites/Manager"));
-        //AddAchievement(new Achievement("조명 관련 업적입니다.", 1, 0, EAchievementCode.Lighting, "Sprites/Light"));
-        AddAchievement(new Achievement("나는 이 코드를 완벽히 이해했나?", 1, 0, EAchievementCode.PassSuccess, "Sprites/Light"));
-        AddAchievement(new Achievement("못한거면 어쩌지", 3, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
-        AddAchievement(new Achievement("코드짜는게 제일 어려워", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
+        AddAchievement(new Achievement("4연속 통과 성공", 4, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
+        AddAchievement(new Achievement("올 클리어!", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
+        AddAchievement(new Achievement("3연속 통과 실패", 3, 0, EAchievementCode.PassFail, "Sprites/Exitfail"));
+        AddAchievement(new Achievement("타임어택 업적입니다.", 0, 15, EAchievementCode.TimeAttack, "Sprites/Time"));
+        AddAchievement(new Achievement("오디오가 재생되고 클리어 되면 깨는 업적입니다.", 1, 0, EAchievementCode.AudioClip, "Sprites/Manager"));
+        AddAchievement(new Achievement("조명 관련 업적입니다.", 1, 0, EAchievementCode.Lighting, "Sprites/Light"));
+        //AddAchievement(new Achievement("나는 이 코드를 완벽히 이해했나?", 1, 0, EAchievementCode.PassSuccess, "Sprites/Light"));
+        //AddAchievement(new Achievement("못한거면 어쩌지", 3, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
+        //AddAchievement(new Achievement("코드짜는게 제일 어려워", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
 
     }
 
