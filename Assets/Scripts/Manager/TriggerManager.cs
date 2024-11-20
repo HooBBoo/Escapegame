@@ -25,5 +25,6 @@ public class TriggerManager : Singleton<TriggerManager>
     public void FloorReset()
     {
         currentfloor=0;
+        UIManager.Instance.UINumberUpdate();
     }
 }

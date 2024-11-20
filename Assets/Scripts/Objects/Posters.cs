@@ -1,39 +1,49 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Posters : Object
 {
     public override void ExecuteRandomAction()
     {
         int actionIndex = Random.Range(0, 3);
-        if (actionIndex == 0)
+        switch (actionIndex)
         {
-            Rotate();
-        }
-        else if (actionIndex == 1)
-        {
-            ChangeColor();
-        }
-        else
-        {
-            return;
+            case 0:
+                Rotate();
+                hasChanged = false;
+                break;
+            case 1:
+                ChangeMaterial();
+                hasChanged = false;
+                break;
+            default:
+                NoChange();
+                hasChanged = true;
+                break;
         }
     }
 
     private void Rotate()
     {
-        // 포스터를 15도 회전시키는 동작
-        transform.Rotate(Vector3.right, 15f);
+        Vector3 currentRotation = transform.eulerAngles;
+        float newRotationX = currentRotation.x + 15f;
+        transform.eulerAngles = new Vector3(newRotationX, currentRotation.y, currentRotation.z);
+        Debug.Log("Rotate");
+    }
+    
+    private void ChangeMaterial() //Meterial 교체
+    {
+        Debug.Log("Material Changed");
     }
 
-    private void ChangeColor()
+
+    public void NoChange()
     {
-        Renderer renderer = GetComponent<Renderer>();
-        if (renderer != null)
-        {
-            renderer.material.color = Random.ColorHSV();
-        }
+        Debug.Log("NoChange");
+        return;
     }
     
 }
