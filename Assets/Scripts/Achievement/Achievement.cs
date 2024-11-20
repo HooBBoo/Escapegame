@@ -4,22 +4,22 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public enum EAchievementCode
 {
-    PassSuccess,  // Åë°ú ¼º°ø  1
-    PassFail,     // Åë°ú ½ÇÆĞ  2
-    TimeAttack,   // Å¸ÀÓ ¾îÅÃ  3   
-    AudioClip,    // ¿Àµğ¿À Å¬¸³°ú °ü·ÃµÈ ¾÷Àû 4
-    Lighting      // Á¶¸í°ú °ü·ÃµÈ ¾÷Àû 5
+    PassSuccess,  // í†µê³¼ ì„±ê³µ  1
+    PassFail,     // í†µê³¼ ì‹¤íŒ¨  2
+    TimeAttack,   // íƒ€ì„ ì–´íƒ  3   
+    AudioClip,    // ì˜¤ë””ì˜¤ í´ë¦½ê³¼ ê´€ë ¨ëœ ì—…ì  4
+    Lighting      // ì¡°ëª…ê³¼ ê´€ë ¨ëœ ì—…ì  5
 }
 
 public class Achievement 
 {
-    public string imagePath; // ÀÌ¹ÌÁö °æ·Î
-    public string name; // È­¸é¿¡ ¶ç¾îÁÙ ÀÌ¸§
-    public int value; // ¾÷Àû °ª
-    public int curvalue = 0; // ÇöÀç ¾÷Àû °ª
-    public float count; // ½Ã°£°ª
-    public EAchievementCode code; // ÄÚµå
-    public bool isCompleted; // ¿Ï·á ¿©ºÎ ÇÃ·¡±×
+    public string imagePath; // ì´ë¯¸ì§€ ê²½ë¡œ
+    public string name; // í™”ë©´ì— ë„ì–´ì¤„ ì´ë¦„
+    public int value; // ì—…ì  ê°’
+    public int curvalue = 0; // í˜„ì¬ ì—…ì  ê°’
+    public float count; // ì‹œê°„ê°’
+    public EAchievementCode code; // ì½”ë“œ
+    public bool isCompleted; // ì™„ë£Œ ì—¬ë¶€ í”Œë˜ê·¸
 
 
 
@@ -46,7 +46,7 @@ public class Achievement
         this.value = value;
         this.count = count;
         this.code = code;
-        this.isCompleted = false; // Ã³À½¿£ ¿Ï·áµÇÁö ¾ÊÀ½
+        this.isCompleted = false; // ì²˜ìŒì—” ì™„ë£Œë˜ì§€ ì•ŠìŒ
     }
 }
 

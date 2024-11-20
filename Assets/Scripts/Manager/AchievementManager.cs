@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,38 +6,57 @@ public class AchievementManager : Singleton<AchievementManager>
 {
     [SerializeField]
     private AchievementUI achievementUI;
-    // ¾÷ÀûÀ» µñ¼Å³Ê¸®·Î °ü¸®
+    // ì—…ì ì„ ë”•ì…”ë„ˆë¦¬ë¡œ ê´€ë¦¬
     private Dictionary<EAchievementCode, List<Achievement>> achievements = new Dictionary<EAchievementCode, List<Achievement>>();
     
-    // ¾÷ÀûÀÌ ´Ş¼º µÇ±â À§ÇÑ Ãß°¡ °úÁ¤
+    // ì—…ì ì´ ë‹¬ì„± ë˜ê¸° ìœ„í•œ ì¶”ê°€ ê³¼ì •
     public void IncreseAchievement(EAchievementCode code, float time = 0)
     {
-
-        if (achievements.ContainsKey(code))
+        if (achievements.ContainsKey(code)) //í•´ë‹¹ ì—…ì ì´ ë”•ì…”ë„ˆë¦¬ì— ìˆìœ¼ë©´
         {
-            List<Achievement> list = achievements[code];
+            List<Achievement> list = achievements[code]; // ê·¸ ë”•ì…”ë„ˆë¦¬ë¥¼ Listì— ë„£ëŠ”ë‹¤.
 
-            foreach (Achievement achievement in list) 
+            foreach (Achievement achievement in list) // í•´ë‹¹ ì—…ì  ë¦¬ìŠ¤íŠ¸ë¥¼ ì „ì²´ ìˆœíšŒí•˜ë©´ì„œ
             {
-                if (time != 0 && achievement.count >= time)
+                if (time != 0 && achievement.count >= time) // ì‹œê°„ì´ 0 ì´ ì•„ë‹ˆê±°ë‚˜ ì‹œê°„ì´ ì˜¤ë²„ëœê²½ìš°
                 {
-                    continue;
+                    continue; // ì—…ì UI ë¹„í™œì„±
                 }
-                if (code == EAchievementCode.PassFail) { ResetPassAchievement(); }
-                if (!achievement.isCompleted) 
-                {
-                    achievement.IncrementProgress();
+                // 3ì—°ì† ì‹¤íŒ¨ í•˜ë‹¤ê°€ ì„±ê³µ ë‚˜ì™”ì„ ë•Œ ì´ˆê¸°í™”
+                if (code == EAchievementCode.PassFail) { ResetPassSuccessAchievement(); } 
+                // 4ì—°ì† ì„±ê³µí•˜ë‹¤ê°€ ì‹¤íŒ¨ ë‚˜ì™”ì„ ë•Œ ì´ˆê¸°í™” 
+                if (code == EAchievementCode.PassSuccess) { ResetPassFailAchievement(); }
 
-                    if (achievement.isCompleted)
+                if (!achievement.isCompleted) // ì„±ê³µí•˜ì§€ ì•Šì•˜ë‹¤ë©´
+                {
+                    achievement.IncrementProgress(); // curvalue ++
+
+                    if (achievement.isCompleted) // ì„±ê³µ ì‹œ
                     {
-                        ShowAchievementUI(achievement);
+                        ShowAchievementUI(achievement); // UI ë„ìš°ê¸°
                     }
                 }
             }
         }
     }
 
-    public void ResetPassAchievement() 
+    private void ResetPassFailAchievement() //ì—…ì  ì´ˆê¸°í™”
+    {
+        // ì—…ì ì´ ì—†ìœ¼ë©´ return = 0 , ì—…ì ì´ ìˆìœ¼ë©´ curvalue 0ìœ¼ë¡œ ë§Œë“¤ê¸°
+        if (!achievements.ContainsKey(EAchievementCode.PassFail))
+        {
+            return;
+        }
+        // ifë¬¸ ë°–ì´ë‹ˆ ì„±ê³µí–ˆë‹¨ ëœ»ìœ¼ë¡œ, ë¦¬ìŠ¤íŠ¸ì— ë„£ì–´ì£¼ê³ 
+        List<Achievement> list = achievements[EAchievementCode.PassFail];
+
+        foreach (Achievement achievement in list) // ë¦¬ìŠ¤íŠ¸ë¥¼ ìˆœíšŒí•˜ë©°
+        {
+            achievement.curvalue = 0;// ì´ˆê¸°í™”
+        }
+    }
+
+    public void ResetPassSuccessAchievement() 
     {
         if(!achievements.ContainsKey(EAchievementCode.PassSuccess))
         {
@@ -51,29 +71,31 @@ public class AchievementManager : Singleton<AchievementManager>
         
     }
 
+
+
     public void AddAchievement(Achievement achievement)
-    {
-        if (!achievements.ContainsKey(achievement.code)) 
+    { //ìƒˆë¡œìš´ ì—…ì ì„ ë”•ì…”ë„ˆë¦¬ì— ì¶”ê°€
+        if (!achievements.ContainsKey(achievement.code)) //í•´ë‹¹ ì½”ë“œê°€ ìˆëŠ” ë”•ì…”ë„ˆë¦¬ê°€ ì—†ë‹¤ë©´
         {
-            achievements[achievement.code] = new List<Achievement>();
+            achievements[achievement.code] = new List<Achievement>(); //ë¦¬ìŠ¤íŠ¸ì— ìƒˆë¡­ê²Œ ì¶”ê°€
         }
-        achievements[achievement.code].Add(achievement);
-        Debug.Log($"¾÷Àû '{achievement.name}'ÀÌ(°¡) '{achievement.code}' ÄÚµå¿¡ Ãß°¡µÇ¾ú½À´Ï´Ù.");
+        achievements[achievement.code].Add(achievement); //í•´ë‹¹ ì½”ë“œê°€ ìˆëŠ” ë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€
+        Debug.Log($"ì—…ì  '{achievement.name}'ì´(ê°€) '{achievement.code}' ì½”ë“œì— ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.");
 
     }
 
     public void InitializeAchievements()
     {
-        // µñ¼Å³Ê¸®¿¡ Ãß°¡
-        AddAchievement(new Achievement("4¿¬¼Ó Åë°ú ¼º°ø", 4, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
-        AddAchievement(new Achievement("¿Ã Å¬¸®¾î!", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
-        AddAchievement(new Achievement("3¿¬¼Ó Åë°ú ½ÇÆĞ", 3, 0, EAchievementCode.PassFail, "Sprites/Exitfail"));
-        AddAchievement(new Achievement("Å¸ÀÓ¾îÅÃ ¾÷ÀûÀÔ´Ï´Ù.", 0, 15, EAchievementCode.TimeAttack, "Sprites/Time"));
-        AddAchievement(new Achievement("¿Àµğ¿À°¡ Àç»ıµÇ°í Å¬¸®¾î µÇ¸é ±ú´Â ¾÷ÀûÀÔ´Ï´Ù.", 1, 0, EAchievementCode.AudioClip, "Sprites/Manager"));
-        AddAchievement(new Achievement("Á¶¸í °ü·Ã ¾÷ÀûÀÔ´Ï´Ù.", 1, 0, EAchievementCode.Lighting, "Sprites/Light"));
-        //AddAchievement(new Achievement("³ª´Â ÀÌ ÄÚµå¸¦ ¿Ïº®È÷ ÀÌÇØÇß³ª?", 1, 0, EAchievementCode.PassSuccess, "Sprites/Light"));
-        //AddAchievement(new Achievement("¸øÇÑ°Å¸é ¾îÂ¼Áö", 3, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
-        //AddAchievement(new Achievement("ÄÚµåÂ¥´Â°Ô Á¦ÀÏ ¾î·Á¿ö", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
+        // ë”•ì…”ë„ˆë¦¬ì— ì¶”ê°€
+        AddAchievement(new Achievement("4ì—°ì† í†µê³¼ ì„±ê³µ", 4, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
+        AddAchievement(new Achievement("ì˜¬ í´ë¦¬ì–´!", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
+        AddAchievement(new Achievement("3ì—°ì† í†µê³¼ ì‹¤íŒ¨", 3, 0, EAchievementCode.PassFail, "Sprites/Exitfail"));
+        AddAchievement(new Achievement("íƒ€ì„ì–´íƒ ì—…ì ì…ë‹ˆë‹¤.", 0, 15, EAchievementCode.TimeAttack, "Sprites/Time"));
+        AddAchievement(new Achievement("ì˜¤ë””ì˜¤ê°€ ì¬ìƒë˜ê³  í´ë¦¬ì–´ ë˜ë©´ ê¹¨ëŠ” ì—…ì ì…ë‹ˆë‹¤.", 1, 0, EAchievementCode.AudioClip, "Sprites/Manager"));
+        AddAchievement(new Achievement("ì¡°ëª… ê´€ë ¨ ì—…ì ì…ë‹ˆë‹¤.", 1, 0, EAchievementCode.Lighting, "Sprites/Light"));
+        //AddAchievement(new Achievement("ë‚˜ëŠ” ì´ ì½”ë“œë¥¼ ì™„ë²½íˆ ì´í•´í–ˆë‚˜?", 1, 0, EAchievementCode.PassSuccess, "Sprites/Light"));
+        //AddAchievement(new Achievement("ëª»í•œê±°ë©´ ì–´ì©Œì§€", 3, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
+        //AddAchievement(new Achievement("ì½”ë“œì§œëŠ”ê²Œ ì œì¼ ì–´ë ¤ì›Œ", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
 
     }
 
@@ -83,28 +105,18 @@ public class AchievementManager : Singleton<AchievementManager>
         achievementUI.ShowAchievementUI(achievement, achievement.imagePath);
     }
 
-    // À¯´ÏÆ¼¿¡¼­ ½ÃÀÛÇÒ ¶§ È£Ãâ
+    // ìœ ë‹ˆí‹°ì—ì„œ ì‹œì‘í•  ë•Œ í˜¸ì¶œ
     void Start()
     {
-        InitializeAchievements(); // ¾÷Àû ÃÊ±âÈ­
+        InitializeAchievements(); // ì—…ì  ì´ˆê¸°í™”
     }
 
     void Update()
     {
-        // ¼ıÀÚ 1 Å°°¡ ´­·ÈÀ» ¶§ curvalue Áõ°¡
-        if (Input.GetKeyDown(KeyCode.Space))// ¼ıÀÚ 1 Å°
+        // ìˆ«ì 1 í‚¤ê°€ ëˆŒë ¸ì„ ë•Œ curvalue ì¦ê°€
+        if (Input.GetKeyDown(KeyCode.Space))// ìˆ«ì 1 í‚¤
         {
-            IncreseAchievement(EAchievementCode.PassSuccess); // PassSuccess ¾÷Àû Áõ°¡
+            IncreseAchievement(EAchievementCode.PassSuccess); // PassSuccess ì—…ì  ì¦ê°€
         }
     }
 }
-
-
-
-//if (achievements.TryGetValue(code, out Achievement achievement))
-//{
-//    achievement.value++;
-//}
-
-// 1. µñ¼Å³Ê¸®¿¡ ¾÷Àû µ¥ÀÌÅÍ¸¦ Ãß°¡ÇÑ´Ù. 2. ÀÌ¹Ì Çß´ø ¾÷ÀûÀº ´õ ÀÌ»ó ¾È³ª¿À°Ô ÇØ¾ßÇÑ´Ù.
-// ±×´ÙÀ½¿¡ UI¿¡ ¶ç¿ì¸é ¿Ïº®ÇØÁø´Ù.

@@ -6,31 +6,31 @@ public class AchievementUI : MonoBehaviour
 {
     public Animator achievementAnimator;
     public TextMeshProUGUI achievementText;
-    public Image achievementImage; // ¾÷Àû ÀÌ¹ÌÁö¸¦ Ç¥½ÃÇÒ UI
+    public Image achievementImage; // ì—…ì  ì´ë¯¸ì§€ë¥¼ í‘œì‹œí•  UI
     public float displayDuration = 2.0f;
     
 
-    // ¾÷Àû UI Ç¥½Ã
+    // ì—…ì  UI í‘œì‹œ
     public void ShowAchievementUI(Achievement achievement, string imagePath)
     {
 
-        // ¾÷Àû ÀÌ¸§°ú ÀÌ¹ÌÁö ¼³Á¤
+        // ì—…ì  ì´ë¦„ê³¼ ì´ë¯¸ì§€ ì„¤ì •
         achievementText.text = $"{achievement.name}";
-        //achievementImage.sprite = image; //ÀÌ¹ÌÁö °æ·Î
+        //achievementImage.sprite = image; //ì´ë¯¸ì§€ ê²½ë¡œ
         Sprite sprite = Resources.Load<Sprite>(imagePath);
         if (sprite != null)
         {
-            achievementImage.sprite = sprite; // UI¿¡ ÀÌ¹ÌÁö ¼³Á¤
+            achievementImage.sprite = sprite; // UIì— ì´ë¯¸ì§€ ì„¤ì •
         }
 
-        // ¾Ö´Ï¸ŞÀÌ¼Ç Æ®¸®°Å ½ÇÇà
+        // ì• ë‹ˆë©”ì´ì…˜ íŠ¸ë¦¬ê±° ì‹¤í–‰
         achievementAnimator.SetTrigger("Show");
 
-        // ÀÏÁ¤ ½Ã°£ ÈÄ UI ¼û±è ¾Ö´Ï¸ŞÀÌ¼Ç ½ÇÇà
+        // ì¼ì • ì‹œê°„ í›„ UI ìˆ¨ê¹€ ì• ë‹ˆë©”ì´ì…˜ ì‹¤í–‰
         Invoke("HideAchievementUI", displayDuration);
     }
 
-    // ¾÷Àû UI ¼û±è
+    // ì—…ì  UI ìˆ¨ê¹€
     private void HideAchievementUI()
     {
         achievementAnimator.SetTrigger("Hide");
