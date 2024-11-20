@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4e3074e5-d382-4b35-9197-8dbfe3bf20b9" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Materials/Classic_fluorescent_lamp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Classic fluorescent lamp/Materials/Classic_fluorescent_lamp.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Large round lamp/Materials/Large round lamp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/New Solution Studio/PBR Lamps Pack/Large round lamp/Materials/Large round lamp.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
