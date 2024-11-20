@@ -148,7 +148,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3976295807506366739}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnJump
+        m_MethodName: OnRun
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
