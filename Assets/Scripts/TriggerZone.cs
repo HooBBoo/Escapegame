@@ -5,7 +5,7 @@ public class TriggerZone : MonoBehaviour
     [Header("Teleport Position")]
     public Transform teleportPosition; // 텔레포트 할 위치
     public bool applyYRotationOffset = false; // Y축 회전을 적용할지 여부
-    public bool invertZOffset = false; // z축 반전이 필요한 트리거
+    public bool invertZOffset = false; // Z축 반전이 필요한 트리거: Y축 회전과 세트
     //public float zOffset = 0f; // 보정이 필요하게 되면 조정
 
     public TriggerType TriggerType; //어떤 존인지 확인
