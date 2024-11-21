@@ -7,7 +7,7 @@ public class LampLight : MonoBehaviour
     private Light light;
     private MeshRenderer lamp;
     private Material lampMat;
-    private MaterialPropertyBlock propertyBlock;
+    //private MaterialPropertyBlock propertyBlock;
 
     void Start()
     {
