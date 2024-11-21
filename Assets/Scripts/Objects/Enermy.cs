@@ -26,13 +26,14 @@ public class Enermy : Object
     }
     public override void ExecuteRandomAction()
     {
-        bool shouldActivate = Random.value > 0.5f;
+        int randomValue = Random.Range(0, 2); 
+        bool shouldActivate = randomValue == 1;
         // 활성화 여부를 무작위로 결정
 
         gameObject.SetActive(shouldActivate);
         // 활성화 상태 설정
 
-        hasChanged = shouldActivate;
+        hasChanged = !shouldActivate;
         // 변경됨을 표시
 
         if (shouldActivate)
