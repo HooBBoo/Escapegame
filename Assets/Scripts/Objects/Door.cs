@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : Object
@@ -13,10 +11,14 @@ public class Door : Object
                 Rotate();
                 hasChanged = false;
                 break;
-            default:
-                NoChange();
-                hasChanged = true;
+            case 1:
+                ChangeColor();
+                hasChanged = false;
                 break;
+            // default:
+            //     NoChange();
+            //     hasChanged = true;
+            //     break;
         }
     }
 
@@ -29,9 +31,14 @@ public class Door : Object
         Debug.Log(transform.eulerAngles);
     }
 
-    public void NoChange()
+    private void ChangeColor()
     {
-        Debug.Log("NoChange");
-        return;
+        objectRenderer.material = Resources.Load<Material>("DoorColor");
+        Debug.Log("Material Door");
     }
+    // public void NoChange()
+    // {
+    //     Debug.Log("NoChange");
+    //     return;
+    // }
 }
