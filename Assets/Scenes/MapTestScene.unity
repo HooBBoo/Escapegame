@@ -6192,6 +6192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b572e295ad4994d999f78bd342300e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectRenderer: {fileID: 0}
   lights:
   - {fileID: 1494106179}
   - {fileID: 995318672}
@@ -20295,28 +20296,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1043551006333910077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4023728374965351940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f8090f18537852478bada3a7094ebe1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  runSpeed: 20
-  groundLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  cameraContainer: {fileID: 6934715835999621821}
-  minXLook: -85
-  maxXLook: 85
-  lookSensitivity: 0.1
-  canLook: 1
 --- !u!4 &1062937789022504743
 Transform:
   m_ObjectHideFlags: 0
@@ -28845,8 +28824,8 @@ GameObject:
   - component: {fileID: 4582075539931730894}
   - component: {fileID: 723670686888968990}
   - component: {fileID: 4333503500101090323}
-  - component: {fileID: 1043551006333910077}
   - component: {fileID: 4300878738045346093}
+  - component: {fileID: 4582075539931730895}
   m_Layer: 6
   m_Name: Player2
   m_TagString: TestPlayer
@@ -29598,7 +29577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d1568f1695c764288e75f891b22a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1043551006333910077}
+  controller: {fileID: 4582075539931730895}
 --- !u!33 &4330869059213629729
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29649,7 +29628,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1043551006333910077}
+      - m_Target: {fileID: 4582075539931730895}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -29665,7 +29644,7 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1043551006333910077}
+      - m_Target: {fileID: 4582075539931730895}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnLook
         m_Mode: 0
@@ -29681,9 +29660,9 @@ MonoBehaviour:
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1043551006333910077}
+      - m_Target: {fileID: 4582075539931730895}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnJump
+        m_MethodName: OnRun
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30262,6 +30241,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &4582075539931730895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4023728374965351940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa0061c428d60941aeb1fcb2a1e9987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  runSpeed: 20
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  cameraContainer: {fileID: 6934715835999621821}
+  minXLook: -85
+  maxXLook: 85
+  lookSensitivity: 0.1
+  canLook: 1
 --- !u!1 &4593122741173957258
 GameObject:
   m_ObjectHideFlags: 0

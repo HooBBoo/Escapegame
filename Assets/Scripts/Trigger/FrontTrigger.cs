@@ -13,10 +13,12 @@ public class FrontTrigger : ITriggerAction
         if (TriggerManager.Instance.isCorrectMap)
         {
             TriggerManager.Instance.FloorUp();
+            AchievementManager.Instance.IncreseAchievement(EAchievementCode.PassSuccess);
         }
         else
         {
             TriggerManager.Instance.FloorReset();
+            AchievementManager.Instance.IncreseAchievement(EAchievementCode.PassFail);
         }
         triggerZone.TeleportPlayer(playerTransform);
     }
