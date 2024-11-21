@@ -13,10 +13,10 @@ public class Door : Object
                 Rotate();
                 hasChanged = false;
                 break;
-            default:
-                NoChange();
-                hasChanged = true;
-                break;
+            // default:
+            //     NoChange();
+            //     hasChanged = true;
+            //     break;
         }
     }
 
@@ -29,9 +29,9 @@ public class Door : Object
         Debug.Log(transform.eulerAngles);
     }
 
-    public void NoChange()
-    {
-        Debug.Log("NoChange");
-        return;
-    }
+    // public void NoChange()
+    // {
+    //     Debug.Log("NoChange");
+    //     return;
+    // }
 }
