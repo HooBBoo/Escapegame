@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e3074e5-d382-4b35-9197-8dbfe3bf20b9" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/3Dfrk/Frames with pictures/Textures/Paint_01_A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/3Dfrk/Frames with pictures/Textures/Paint_01_A.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/3Dfrk/Frames with pictures/Textures/Paint_02_B.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/3Dfrk/Frames with pictures/Textures/Paint_02_B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Externals/3Dfrk/Frames with pictures/Textures/Paint_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Externals/3Dfrk/Frames with pictures/Textures/Paint_04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Escapegame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Escapegame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameMainScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
