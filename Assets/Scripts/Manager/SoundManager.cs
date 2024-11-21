@@ -64,7 +64,7 @@ public class SoundManager : Singleton<SoundManager>
         {
             if (!walkSource.isPlaying)
             {
-                if (audioClips.TryGetValue("PlayerWalk", out AudioClip walkingClip))
+                if (audioClips.TryGetValue("Walking", out AudioClip walkingClip))
                 {
                     walkSource.clip = walkingClip;
                     walkSource.Play();

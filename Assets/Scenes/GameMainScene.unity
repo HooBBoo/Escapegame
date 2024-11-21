@@ -6417,6 +6417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054005995}
   - component: {fileID: 1054005994}
+  - component: {fileID: 1054005996}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6451,6 +6452,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1054005996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054005993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8391d3e3f9531d64f81211250183f75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectLights: {fileID: 0}
 --- !u!1 &1082768792
 GameObject:
   m_ObjectHideFlags: 0
@@ -9429,6 +9443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartUI
       objectReference: {fileID: 0}
+    - target: {fileID: 6878323567233548958, guid: ec44ccbedf4e92c4dadabe454b0b9693, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10026,9 +10044,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   runSpeed: 20
-  groundLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
   cameraContainer: {fileID: 1455596984}
   minXLook: -85
   maxXLook: 85
@@ -16311,7 +16326,6 @@ MonoBehaviour:
   maxWanderDistance: 10
   minWanderWaitTime: 1
   maxWanderWaitTime: 2
-  playerDistance: 0
 --- !u!1 &276920222915111980
 GameObject:
   m_ObjectHideFlags: 0
