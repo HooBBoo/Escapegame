@@ -13,9 +13,9 @@ public class Knob : Object
                 SetActive();
                 hasChanged = false;
                 break;
-            default:
-                NoChange();
-                hasChanged = true;
+            case 1:
+                Switch();
+                hasChanged = false;
                 break;
         }
     }
@@ -23,13 +23,18 @@ public class Knob : Object
     private void SetActive()
     {
         gameObject.SetActive(false);
-        Debug.Log("SetActive");
         
     }
 
-    public void NoChange()
+    private void Switch()
     {
-        Debug.Log("NoChange");
-        return;
+        gameObject.SetActive(true);
+
+        Vector3 currentPosition = transform.position;
+        currentPosition = new Vector3(currentPosition.x + 1f, currentPosition.y,currentPosition.z);
+        transform.position = currentPosition;
+
+        Debug.Log($"문고리의 X 위치가 +8 증가하여 {transform.position.x}이(가) 되었습니다.");
     }
+
 }

@@ -66,11 +66,11 @@ public class TriggerZone : MonoBehaviour
         }
         // 현재 층수에 따라 다른 텔레포트 위치를 선택
         Transform targetPosition;
-        if (TriggerManager.Instance.currentfloor < 6)
+        if (TriggerManager.Instance.currentfloor < 10)
         {
             targetPosition = teleportPosition[0];
         }
-        else if (TriggerManager.Instance.currentfloor ==6) //점수가 올라가고 텔레포트가 되어서 6으로 설정
+        else if (TriggerManager.Instance.currentfloor == 10) //점수가 올라가고 텔레포트가 되어서 6으로 설정
         {
             targetPosition = teleportPosition[1];
         }

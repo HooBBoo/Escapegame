@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enermy : Object
@@ -25,19 +26,29 @@ public class Enermy : Object
     private void SetActive()
     {
         gameObject.SetActive(false);
-        Debug.Log("SetActiveManager");
         
     }
 
     private void Sound()
     {
         EventBus.Publish("ManagerSound");
-        Debug.Log("SoundManager");
+        StartCoroutine(PlayLongSound());
     }
 
     public void NoChange()
     {
-        Debug.Log("NoChange");
         return;
+    }
+
+    private IEnumerator PlayLongSound()
+    {
+        yield return new WaitForSeconds(2f); 
+        EventBus.Publish("ManagerLongSound");
+        yield return new WaitForSeconds(3f); 
+        EventBus.Publish("ManagerSound");
+        yield return new WaitForSeconds(2f); 
+        EventBus.Publish("ManagerLongSound");
+        yield return new WaitForSeconds(3f); 
+        EventBus.Publish("ManagerSound");
     }
 }

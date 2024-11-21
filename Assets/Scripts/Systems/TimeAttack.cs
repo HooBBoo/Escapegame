@@ -5,7 +5,6 @@ public class TimeAttack : MonoBehaviour
     [Header("Time")]
     private float elapsedTime; // 경과된 시간(초 단위)
     
-
     // Update is called once per frame
     void Update()
     {
@@ -21,4 +20,15 @@ public class TimeAttack : MonoBehaviour
         UIManager.Instance.UpdateTime(minutes, seconds);
         
     }
+    public void GameClear()
+    {
+        AchievementManager.Instance.IncreseAchievement(EAchievementCode.TimeAttack,elapsedTime);
+    }
+
+    private void Start()
+    {
+        GameManager.OnGameClear += GameClear;
+    }
+
+
 }

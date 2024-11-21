@@ -15,17 +15,13 @@ public class Door : Object
                 ChangeColor();
                 hasChanged = false;
                 break;
-            // default:
-            //     NoChange();
-            //     hasChanged = true;
-            //     break;
         }
     }
 
     private void Rotate()
     {
         Vector3 currentRotation = transform.eulerAngles;
-        float newRotationY = currentRotation.x -10f;
+        float newRotationY = currentRotation.x - 10f;
         transform.eulerAngles = new Vector3(currentRotation.x, newRotationY, currentRotation.z);
         Debug.Log("yRotate");
         Debug.Log(transform.eulerAngles);
@@ -34,11 +30,5 @@ public class Door : Object
     private void ChangeColor()
     {
         objectRenderer.material = Resources.Load<Material>("DoorColor");
-        Debug.Log("Material Door");
     }
-    // public void NoChange()
-    // {
-    //     Debug.Log("NoChange");
-    //     return;
-    // }
 }
