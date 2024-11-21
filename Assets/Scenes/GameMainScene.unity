@@ -10016,9 +10016,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   runSpeed: 20
-  groundLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
   cameraContainer: {fileID: 1455596984}
   minXLook: -85
   maxXLook: 85
@@ -16301,7 +16298,6 @@ MonoBehaviour:
   maxWanderDistance: 10
   minWanderWaitTime: 1
   maxWanderWaitTime: 2
-  playerDistance: 0
 --- !u!1 &276920222915111980
 GameObject:
   m_ObjectHideFlags: 0
