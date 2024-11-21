@@ -34,7 +34,7 @@ public class TriggerZone : MonoBehaviour
         if ((triggerType == TriggerType.FrontTrigger || triggerType == TriggerType.BackTrigger) && isMapTriggerNext) return; // FrontTrigger와 BackTrigger는 반드시 MapTrigger 후에만 실행 가능
 
         // 트리거 실행
-        if (hitobject.CompareTag("TestPlayer"))
+        if (hitobject.CompareTag("Player"))
         {
             Transform playerTransform = hitobject.transform;
             triggerAction.ExecuteTrigger(playerTransform, this);

@@ -1,10 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using Objects;
 using UnityEngine;
 
-namespace Objects
-{
     public class ObjectTest : MonoBehaviour
     {
         [Header("Test")]
@@ -18,5 +15,3 @@ namespace Objects
             }
         }
     }
-}
-
