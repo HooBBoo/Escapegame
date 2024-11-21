@@ -2,15 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Objects
-{
     public class ObjectLights : Object
 {
     [Header("Light Objects")]
     public Light[] lights;
     public override void ExecuteRandomAction()
     {
-        OffLights();
+        int actionIndex = Random.Range(0,2);
+        switch (actionIndex)
+        {
+            case 0:
+                OffLights();
+                hasChanged = false;
+                break;
+            case 1:
+                NoChange();
+                hasChanged = true;
+                break;
+        }
     }
 
     private void OffLights()
@@ -29,6 +38,11 @@ namespace Objects
             }
         }
     }
+    public void NoChange()
+    {
+        Debug.Log("NoChange");
+        return;
+    }
 }
-}
+
 

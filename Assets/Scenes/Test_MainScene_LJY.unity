@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 1}
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 3
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 0
+  m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4276,7 +4276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 365079607}
   m_Layer: 0
-  m_Name: TeleportPosition_back
+  m_Name: TeleportPosition2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4814,37 +4814,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384327697}
   m_Mesh: {fileID: 8733429697405204941, guid: 05323b62e9a5c4f43bf94c451c70c99f, type: 3}
---- !u!1 &385714314
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 385714315}
-  m_Layer: 0
-  m_Name: ==========
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &385714315
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385714314}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 173.51581, y: 7.858725, z: 9.52587}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &392595970
 GameObject:
   m_ObjectHideFlags: 0
@@ -5606,7 +5575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 506532968}
   m_Layer: 0
-  m_Name: Map_Objects_Trigger
+  m_Name: TestC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5963,7 +5932,7 @@ GameObject:
   - component: {fileID: 527235549}
   - component: {fileID: 527235548}
   m_Layer: 0
-  m_Name: MapTrigger
+  m_Name: Trigger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7112,7 +7081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 612140364}
   m_Layer: 0
-  m_Name: TeleportPosition_front
+  m_Name: TeleportPosition1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9187,7 +9156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 772078185}
   m_Layer: 0
-  m_Name: Map
+  m_Name: TestMap2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13572,7 +13541,7 @@ GameObject:
   - component: {fileID: 1117467044}
   - component: {fileID: 1117467043}
   m_Layer: 0
-  m_Name: FrontTrigger
+  m_Name: Trigger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15904,7 +15873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1220691016}
   m_Layer: 0
-  m_Name: Map
+  m_Name: TestMap2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18668,6 +18637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235fd22b8e11e0041999b2ba8481b642, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievementUI: {fileID: 1277692392}
 --- !u!114 &1360839025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21506,8 +21476,8 @@ GameObject:
   - component: {fileID: 1537986276}
   - component: {fileID: 1537986275}
   m_Layer: 6
-  m_Name: Player
-  m_TagString: Player
+  m_Name: Player2
+  m_TagString: TestPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25483,37 +25453,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809802856}
   m_Mesh: {fileID: 8733429697405204941, guid: 05323b62e9a5c4f43bf94c451c70c99f, type: 3}
---- !u!1 &1821196753
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1821196754}
-  m_Layer: 0
-  m_Name: '========== '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1821196754
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821196753}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 173.51581, y: 7.858725, z: 9.52587}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1823828430
 GameObject:
   m_ObjectHideFlags: 0
@@ -29794,7 +29733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2117495275}
   m_Layer: 0
-  m_Name: Objects
+  m_Name: Objects (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29831,7 +29770,7 @@ GameObject:
   - component: {fileID: 2118522555}
   - component: {fileID: 2118522554}
   m_Layer: 0
-  m_Name: BackTrigger
+  m_Name: Trigger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29976,16 +29915,14 @@ MeshFilter:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1047579065}
   - {fileID: 1320550322}
-  - {fileID: 385714315}
-  - {fileID: 1537986280}
   - {fileID: 506532968}
+  - {fileID: 1537986280}
   - {fileID: 1529831710}
-  - {fileID: 1821196754}
   - {fileID: 1277692397}
   - {fileID: 1881490414}
   - {fileID: 172947728}
   - {fileID: 1054005995}
-  - {fileID: 2050555601}
   - {fileID: 1701427061}
+  - {fileID: 1047579065}
+  - {fileID: 2050555601}
