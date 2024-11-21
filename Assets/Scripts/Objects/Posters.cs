@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class Posters : Object
 {
+    [SerializeField] private Material oppositeMaterial; // 반대되는 Material을 저장할 변수
     public override void ExecuteRandomAction()
     {
         int actionIndex = Random.Range(0, 3);
@@ -19,10 +20,6 @@ public class Posters : Object
                 ChangeMaterial();
                 hasChanged = false;
                 break;
-            // default:
-            //     NoChange();
-            //     hasChanged = true;
-            //     break;
         }
     }
 
@@ -36,15 +33,15 @@ public class Posters : Object
     
     private void ChangeMaterial() //Meterial 교체
     {
-        objectRenderer.material = Resources.Load<Material>("Paint_04");
-        Debug.Log("Material Changed");
+        if (oppositeMaterial != null) // 반대 Material이 설정되어 있는지 확인
+        {
+            objectRenderer.material = oppositeMaterial; // 반대 Material로 변경
+            Debug.Log($"Material Changed to {oppositeMaterial.name}");
+        }
+        else
+        {
+            Debug.LogWarning("oppositeMaterial이 설정되지 않았습니다.");
+        }
     }
 
-
-    // public void NoChange()
-    // {
-    //     Debug.Log("NoChange");
-    //     return;
-    // }
-    
 }
