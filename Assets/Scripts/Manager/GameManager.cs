@@ -7,4 +7,15 @@ public class GameManager : Singleton<GameManager>
     {
         //시작 씬 관련 
     }
+
+
+
+    public delegate void GameStartHandler();
+    public static event GameStartHandler OnGameStart;
+
+    private void Start()
+    {
+        // 게임 시작 시 이벤트 호출
+        OnGameStart?.Invoke();
+    }
 }
