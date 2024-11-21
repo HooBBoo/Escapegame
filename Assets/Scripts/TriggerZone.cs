@@ -6,14 +6,13 @@ public class TriggerZone : MonoBehaviour
     public Transform teleportPosition; // 텔레포트 할 위치
     public bool applyYRotationOffset = false; // Y축 회전을 적용할지 여부
     public bool invertZOffset = false; // Z축 반전이 필요한 트리거: Y축 회전과 세트
-    //public float zOffset = 0f; // 보정이 필요하게 되면 조정
-
-    public TriggerType triggerType; //어떤 존인지 확인
+    public TriggerType triggerType; // 어떤 존인지 확인
     private ITriggerAction triggerAction; // 트리거 동작을 처리할 인터페이스
-    
+    private static bool isMapTriggerNext = true; // 트리거 실행 순서를 관리하는 변수
+    private bool isTriggerRecentlyActivated = false; // 최근에 트리거가 작동되었는지 확인
+
     private void Start()
     {
-        // TriggerType에 따라 적절한 TriggerAction을 할당
         switch (triggerType)
         {
             case TriggerType.FrontTrigger:
@@ -27,36 +26,44 @@ public class TriggerZone : MonoBehaviour
                 break;
         }
     }
-    
-    // 플레이어가 트리거에 들어갔을 때
+
     private void OnTriggerEnter(Collider hitobject)
     {
+        // 트리거 순서 제어 로직
+        if (triggerType == TriggerType.MapTrigger && !isMapTriggerNext) return; // MapTrigger는 반드시 FrontTrigger 또는 BackTrigger 후에 실행되어야 함
+        if ((triggerType == TriggerType.FrontTrigger || triggerType == TriggerType.BackTrigger) && isMapTriggerNext) return; // FrontTrigger와 BackTrigger는 반드시 MapTrigger 후에만 실행 가능
+
+        // 트리거 실행
         if (hitobject.CompareTag("TestPlayer"))
         {
             Transform playerTransform = hitobject.transform;
-            triggerAction.ExecuteTrigger(playerTransform, this); 
+            triggerAction.ExecuteTrigger(playerTransform, this);
+
+            // 상태 변경: MapTrigger가 실행되었으면 false, Front/BackTrigger가 실행되었으면 true로 설정
+            if (triggerType == TriggerType.MapTrigger)
+            {
+                isMapTriggerNext = false;
+            }
+            else if (triggerType == TriggerType.FrontTrigger || triggerType == TriggerType.BackTrigger)
+            {
+                isMapTriggerNext = true;
+            }
         }
     }
-    
-    // 플레이어 Teleport
+
     public void TeleportPlayer(Transform playerTransform)
     {
-        // 트리거와 플레이어의 상대적인 위치 계산하여 이동(끊기는 느낌 안나게)
-        Vector3 playerOffset = playerTransform.position - transform.position;
+        // 트리거가 다시 작동될 수 있도록 일정 시간이 지난 후 상태 초기화
         
-        // z축 반전: y값 180도 회전이 적용되는 트리거에서 필요
+        Vector3 playerOffset = playerTransform.position - transform.position;
+
         if (invertZOffset)
         {
             playerOffset.z = -playerOffset.z;
         }
-        
-        // 보정이 필요하게 되면 조정
-        //playerOffset.z += zOffset;
 
-        // 위치 설정
         playerTransform.position = teleportPosition.position + playerOffset;
-        
-        // y축 회전이 적용 된 경우
+
         if (applyYRotationOffset)
         {
             playerTransform.rotation = Quaternion.Euler(
@@ -66,5 +73,4 @@ public class TriggerZone : MonoBehaviour
             );
         }
     }
-  
 }
