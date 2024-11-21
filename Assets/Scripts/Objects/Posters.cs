@@ -36,6 +36,7 @@ public class Posters : Object
     
     private void ChangeMaterial() //Meterial 교체
     {
+        objectRenderer.material = Resources.Load<Material>("Paint_04");
         Debug.Log("Material Changed");
     }
 

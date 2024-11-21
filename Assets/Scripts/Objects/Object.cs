@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public interface IChildAction //기능을 실행시켜주기 위한 작업
@@ -9,10 +8,16 @@ public class Object : MonoBehaviour, IChildAction
 {
     protected bool hasChanged = false;
     private Quaternion originalRotation; // 초기 회전 상태 저장
-
+    private Material originalMaterial; // 초기 머티리얼 저장
+    public Renderer objectRenderer; // Renderer 참조
     private void Awake()
     {
         originalRotation = transform.rotation;
+        objectRenderer = GetComponent<MeshRenderer>();
+        if (objectRenderer != null)
+        {
+            originalMaterial = objectRenderer.material;
+        }
     }
 
     public bool HasChanged()
@@ -28,5 +33,9 @@ public class Object : MonoBehaviour, IChildAction
     public void ResetToOriginalState()
     {
         transform.rotation = originalRotation;
+        if (objectRenderer != null)
+        {
+            objectRenderer.material = originalMaterial;
+        }
     }
 }
