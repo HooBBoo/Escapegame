@@ -39,6 +39,7 @@ using UnityEngine;
     private void OffLights()
     {
         StartCoroutine(OffLightsCoroutine());
+        AchievementManager.Instance.IncreseAchievement(EAchievementCode.Lighting);
         Debug.Log("OffLights");
     }
 

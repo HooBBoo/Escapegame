@@ -19,10 +19,10 @@ public class Posters : Object
                 ChangeMaterial();
                 hasChanged = false;
                 break;
-            default:
-                NoChange();
-                hasChanged = true;
-                break;
+            // default:
+            //     NoChange();
+            //     hasChanged = true;
+            //     break;
         }
     }
 
@@ -41,10 +41,10 @@ public class Posters : Object
     }
 
 
-    public void NoChange()
-    {
-        Debug.Log("NoChange");
-        return;
-    }
+    // public void NoChange()
+    // {
+    //     Debug.Log("NoChange");
+    //     return;
+    // }
     
 }
