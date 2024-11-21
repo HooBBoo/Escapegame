@@ -4,8 +4,21 @@ using UnityEngine;
 
     public class ObjectLights : Object
 {
-    [Header("Light Objects")]
-    public Light[] lights;
+    public List<LampLight> lampLights = new List<LampLight>();
+    
+    void Start()
+    {
+        // 하위 자식에서 LampLight 컴포넌트 자동 검색 및 추가
+        foreach (Transform child in transform)
+        {
+            LampLight lamp = child.GetComponent<LampLight>();
+            if (lamp != null)
+            {
+                lampLights.Add(lamp);
+            }
+        }
+    }
+    
     public override void ExecuteRandomAction()
     {
         int actionIndex = Random.Range(0,2);
@@ -29,11 +42,11 @@ using UnityEngine;
 
     private IEnumerator OffLightsCoroutine()
     {
-        foreach (Light light in lights)
+        foreach (LampLight lamp in lampLights)
         {
-            if (light != null)
+            if (GetComponent<Light>() != null)
             {
-                light.enabled = false; //  조명 끄기
+                GetComponent<Light>().enabled = false; //  조명 끄기
                 yield return new WaitForSeconds(0.7f); // 끄는 간격
             }
         }

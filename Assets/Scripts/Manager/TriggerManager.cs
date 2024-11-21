@@ -3,7 +3,7 @@ public enum TriggerType
 {
     FrontTrigger,
     BackTrigger,
-    MapTrigger
+    MapTrigger,
     // 필요한 만큼 더 추가 가능
 }
 
