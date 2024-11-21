@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class LampLight : MonoBehaviour
 {
-    public Light light;
-    public MeshRenderer lamp;
+    private Light light;
+    private MeshRenderer lamp;
+    private Material lampMat;
     private MaterialPropertyBlock propertyBlock;
 
     void Start()
     {
         light = GetComponentInChildren<Light>();
         lamp = GetComponentInChildren<MeshRenderer>();
+        lampMat = lamp.material;
     }
 
     // Light & Emission 설정
     private void SetLightAndEmission(bool state)
     {
         light.enabled = state;
-
-        lamp.GetPropertyBlock(propertyBlock);
-        propertyBlock.SetColor("_EmissionColor", state ? Color.white * 2.0f : Color.black);
-        lamp.SetPropertyBlock(propertyBlock);
+        lampMat.SetColor("_EmissionColor", state ? Color.white : Color.clear);
     }
     
     // Light & Emission 활성화

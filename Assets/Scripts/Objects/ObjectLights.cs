@@ -5,10 +5,11 @@ using UnityEngine;
     public class ObjectLights : Object
 {
     public List<LampLight> lampLights = new List<LampLight>();
+    public float offToOnDelay = 2.0f; // 조명 다시 켜기 전 대기 시간
     
     void Start()
     {
-        // 하위 자식에서 LampLight 컴포넌트 자동 검색 및 추가
+        // LampLight 추가
         foreach (Transform child in transform)
         {
             LampLight lamp = child.GetComponent<LampLight>();
@@ -44,13 +45,25 @@ using UnityEngine;
     {
         foreach (LampLight lamp in lampLights)
         {
-            if (GetComponent<Light>() != null)
-            {
-                GetComponent<Light>().enabled = false; //  조명 끄기
-                yield return new WaitForSeconds(0.7f); // 끄는 간격
-            }
+            lamp.TurnOff();
+            yield return new WaitForSeconds(0.3f); // 끄는 간격
+        }
+        
+        // 조명 끈 후 대기 시간
+        yield return new WaitForSeconds(offToOnDelay);
+
+        // 모든 조명 다시 켜기
+        TurnOnAllLights();
+    }
+    
+    private void TurnOnAllLights()
+    {
+        foreach (LampLight lamp in lampLights)
+        {
+            lamp.TurnOn(); // 모든 조명 켜기
         }
     }
+    
     public void NoChange()
     {
         Debug.Log("NoChange");
