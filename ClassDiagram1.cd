@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AchievementUI" Collapsed="true">
+    <Position X="14" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAgAAAAAAAAAQAAAAAAAAAAAACAAAAAABBA=</HashCode>
+      <FileName>Assets\Scripts\Achievement\Achievement UI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Achievement" Collapsed="true">
+    <Position X="12.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAIAhAAAAAACMAAEACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Achievement\Achievement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AchievementManager">
+    <Position X="6.5" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAIAACAABAIAAAAAAAAAAgAgABgA=</HashCode>
+      <FileName>Assets\Scripts\Manager\AchievementManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterManager" Collapsed="true">
+    <Position X="17.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAAQAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Manager\CharacterManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Manager\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundManager" Collapsed="true">
+    <Position X="0.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAABAAAAAAIAQAQAAAAAAAAAAAAAQAAACEA=</HashCode>
+      <FileName>Assets\Scripts\Manager\SoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TriggerManager" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAACAAgAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Manager\TriggerManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIManager" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAQAAAE=</HashCode>
+      <FileName>Assets\Scripts\Manager\UIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Object" Collapsed="true">
+    <Position X="1.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAQAAAAAAAAAgAIAAAAAAAAAAAAAAAgAAAABAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Objects\Object.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Posters" Collapsed="true">
+    <Position X="2.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAEEAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Objects\Posters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyController" Collapsed="true">
+    <Position X="12.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARABAACCCAQAQAICAAAAAIAAgEAAQAAAAAAAAAAAMA=</HashCode>
+      <FileName>Assets\Scripts\Player\EnemyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player" Collapsed="true">
+    <Position X="14" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Player\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerController" Collapsed="true">
+    <Position X="15.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAABBAVqAAAABRAAAAIAIAAAEACAABAAAgCaAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeAttack" Collapsed="true">
+    <Position X="17.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Systems\TimeAttack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BackTrigger" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Trigger\BackTrigger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FrontTrigger" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Trigger\FrontTrigger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MapTrigger" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Trigger\MapTrigger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TriggerZone" Collapsed="true">
+    <Position X="12.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACiAAAAAAAAAAAAACAAAAAABAQAAAAIAARAA=</HashCode>
+      <FileName>Assets\Scripts\TriggerZone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventBus" Collapsed="true">
+    <Position X="14" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAACAAAAQAAAAAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\EventBus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Singleton&lt;T&gt;" Collapsed="true">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Objects.ObjectLights" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAMAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Objects\ObjectLights.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Objects.ObjectTest" Collapsed="true">
+    <Position X="12.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Objects\ObjectTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ITriggerAction" Collapsed="true">
+    <Position X="14" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Manager\TriggerManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IChildAction" Collapsed="true">
+    <Position X="12.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Objects\Object.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="EAchievementCode" Collapsed="true">
+    <Position X="14" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAgAQAAAAAAAAAAAACAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Achievement\Achievement.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AudioCategory" Collapsed="true">
+    <Position X="12.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Manager\SoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TriggerType" Collapsed="true">
+    <Position X="15.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Manager\TriggerManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
