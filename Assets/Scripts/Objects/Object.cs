@@ -6,6 +6,7 @@ public interface IChildAction //기능을 실행시켜주기 위한 작업
 }
 public class Object : MonoBehaviour, IChildAction
 {
+    private Vector3 originalPosition;
     protected bool hasChanged = false;
     private Quaternion originalRotation; // 초기 회전 상태 저장
     private Material originalMaterial; // 초기 머티리얼 저장
@@ -13,6 +14,7 @@ public class Object : MonoBehaviour, IChildAction
     private void Awake()
     {
         originalRotation = transform.rotation;
+        originalPosition = transform.position;
         objectRenderer = GetComponent<MeshRenderer>();
         if (objectRenderer != null)
         {
@@ -32,6 +34,8 @@ public class Object : MonoBehaviour, IChildAction
     
     public void ResetToOriginalState()
     {
+        transform.position = originalPosition;// 문고리 위치 초기화
+
         gameObject.SetActive(true);
         Debug.Log("set active true");
         transform.rotation = originalRotation;
