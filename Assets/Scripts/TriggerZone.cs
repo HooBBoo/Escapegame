@@ -3,13 +3,13 @@ using UnityEngine;
 public class TriggerZone : MonoBehaviour
 {
     [Header("Teleport Position")]
-    public Transform teleportPosition; // 텔레포트 할 위치
+    public Transform[] teleportPosition; // 텔레포트 할 위치
     public bool applyYRotationOffset = false; // Y축 회전을 적용할지 여부
     public bool invertZOffset = false; // Z축 반전이 필요한 트리거: Y축 회전과 세트
     public TriggerType triggerType; // 어떤 존인지 확인
     private ITriggerAction triggerAction; // 트리거 동작을 처리할 인터페이스
     private static bool isMapTriggerNext = true; // 트리거 실행 순서를 관리하는 변수
-    private bool isTriggerRecentlyActivated = false; // 최근에 트리거가 작동되었는지 확인
+    private bool isTriggerRecentlyActivated; // 최근에 트리거가 작동되었는지 확인
 
     private void Start()
     {
@@ -23,6 +23,9 @@ public class TriggerZone : MonoBehaviour
                 break;
             case TriggerType.MapTrigger:
                 triggerAction = new MapTrigger();
+                break;
+            case TriggerType.EndTrigger:
+                triggerAction = new EndTrigger();
                 break;
         }
     }
@@ -61,8 +64,22 @@ public class TriggerZone : MonoBehaviour
         {
             playerOffset.z = -playerOffset.z;
         }
+        // 현재 층수에 따라 다른 텔레포트 위치를 선택
+        Transform targetPosition;
+        if (TriggerManager.Instance.currentfloor < 6)
+        {
+            targetPosition = teleportPosition[0];
+        }
+        else if (TriggerManager.Instance.currentfloor ==6) //점수가 올라가고 텔레포트가 되어서 6으로 설정
+        {
+            targetPosition = teleportPosition[1];
+        }
+        else
+        {
+            return; // 층수나 설정이 잘못되었을 경우 아무 동작도 하지 않음
+        }
 
-        playerTransform.position = teleportPosition.position + playerOffset;
+        playerTransform.position = targetPosition.position + playerOffset;
 
         if (applyYRotationOffset)
         {

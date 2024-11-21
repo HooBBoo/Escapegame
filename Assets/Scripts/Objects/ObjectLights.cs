@@ -25,6 +25,7 @@ using UnityEngine;
     private void OffLights()
     {
         StartCoroutine(OffLightsCoroutine());
+        Debug.Log("OffLights");
     }
 
     private IEnumerator OffLightsCoroutine()

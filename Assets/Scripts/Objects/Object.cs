@@ -32,6 +32,8 @@ public class Object : MonoBehaviour, IChildAction
     
     public void ResetToOriginalState()
     {
+        gameObject.SetActive(true);
+        Debug.Log("set active true");
         transform.rotation = originalRotation;
         if (objectRenderer != null)
         {

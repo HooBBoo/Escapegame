@@ -88,7 +88,7 @@ public class AchievementManager : Singleton<AchievementManager>
     {
         // 딕셔너리에 추가
         AddAchievement(new Achievement("4연속 통과 성공", 4, 0, EAchievementCode.PassSuccess, "Sprites/Lucky"));
-        AddAchievement(new Achievement("올 클리어!", 6, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
+        AddAchievement(new Achievement("올 클리어!", 7, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
         AddAchievement(new Achievement("3연속 통과 실패", 3, 0, EAchievementCode.PassFail, "Sprites/Exitfail"));
         AddAchievement(new Achievement("타임어택 업적입니다.", 0, 15, EAchievementCode.TimeAttack, "Sprites/Time"));
         AddAchievement(new Achievement("오디오가 재생되고 클리어 되면 깨는 업적입니다.", 1, 0, EAchievementCode.AudioClip, "Sprites/Manager"));

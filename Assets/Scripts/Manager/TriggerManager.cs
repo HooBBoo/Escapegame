@@ -3,7 +3,8 @@ public enum TriggerType
 {
     FrontTrigger,
     BackTrigger,
-    MapTrigger
+    MapTrigger,
+    EndTrigger
     // 필요한 만큼 더 추가 가능
 }
 
@@ -20,6 +21,7 @@ public class TriggerManager : Singleton<TriggerManager>
     {
         currentfloor++;
         UIManager.Instance.UINumberUpdate();
+        Debug.Log(currentfloor);
     }
 
     public void FloorReset()
