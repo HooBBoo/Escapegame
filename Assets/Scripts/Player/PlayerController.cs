@@ -66,10 +66,12 @@ public class PlayerController : MonoBehaviour
         if(context.phase == InputActionPhase.Performed)
         {
             curMovementInput = context.ReadValue<Vector2>();
+            SoundManager.Instance.SetWalkingState(true);
         }
         else if (context.phase == InputActionPhase.Canceled)
         {
             curMovementInput = Vector2.zero;
+            SoundManager.Instance.SetWalkingState(false);
         }
     }
 
