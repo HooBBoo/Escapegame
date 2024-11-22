@@ -11655,7 +11655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa0061c428d60941aeb1fcb2a1e9987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 5
   runSpeed: 20
   cameraContainer: {fileID: 1455596984}
   minXLook: -85
