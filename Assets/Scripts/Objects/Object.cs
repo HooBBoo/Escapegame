@@ -27,12 +27,12 @@ public class Object : MonoBehaviour, IChildAction
         return hasChanged;
     }
     // 인터페이스를 구현했지만 실제로 기능은 구체적인 자식 클래스들이 정의
-    public virtual void ExecuteRandomAction()
+    public virtual void ExecuteRandomAction() //object들 기능 구현을 위한 virtual
     {
         
     }
     
-    public void ResetToOriginalState()
+    public void ResetToOriginalState() //object 초기화 해주는 부분
     {
         transform.position = originalPosition;// 문고리 위치 초기화
 

@@ -17,14 +17,14 @@ public class TriggerManager : Singleton<TriggerManager>
     public int currentfloor=0; //현재 층
     public bool isCorrectMap = true; //맵이 정상인지
     
-    public void FloorUp()
+    public void FloorUp() //층수 증가
     {
         currentfloor++;
         UIManager.Instance.UINumberUpdate();
-        Debug.Log(currentfloor);
+ 
     }
 
-    public void FloorReset()
+    public void FloorReset() //층수 초기화
     {
         currentfloor=0;
         UIManager.Instance.UINumberUpdate();

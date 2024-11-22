@@ -16,7 +16,7 @@ public class DoorTransparency : Object
         }
     }
 
-    private void SetActive()
+    private void SetActive() //문 사라지는 코드
     {
         gameObject.SetActive(false);
 

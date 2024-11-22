@@ -18,16 +18,15 @@ public class Door : Object
         }
     }
 
-    private void Rotate()
+    private void Rotate() //문이 열리는 내용
     {
         Vector3 currentRotation = transform.eulerAngles;
         float newRotationY = currentRotation.x - 10f;
         transform.eulerAngles = new Vector3(currentRotation.x, newRotationY, currentRotation.z);
-        Debug.Log("yRotate");
-        Debug.Log(transform.eulerAngles);
+
     }
 
-    private void ChangeColor()
+    private void ChangeColor() //색 체인지
     {
         objectRenderer.material = Resources.Load<Material>("DoorColor");
     }

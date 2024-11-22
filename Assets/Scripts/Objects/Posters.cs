@@ -23,12 +23,11 @@ public class Posters : Object
         }
     }
 
-    private void Rotate()
+    private void Rotate() //포스터 회전
     {
         Vector3 currentRotation = transform.eulerAngles;
         float newRotationX = currentRotation.x + 15f;
         transform.eulerAngles = new Vector3(newRotationX, currentRotation.y, currentRotation.z);
-        Debug.Log("Rotate");
     }
     
     private void ChangeMaterial() //Meterial 교체
@@ -36,11 +35,6 @@ public class Posters : Object
         if (oppositeMaterial != null) // 반대 Material이 설정되어 있는지 확인
         {
             objectRenderer.material = oppositeMaterial; // 반대 Material로 변경
-            Debug.Log($"Material Changed to {oppositeMaterial.name}");
-        }
-        else
-        {
-            Debug.LogWarning("oppositeMaterial이 설정되지 않았습니다.");
         }
     }
 

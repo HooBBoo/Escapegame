@@ -18,17 +18,12 @@ public class PulpleDoor : Object
         }
     }
 
-    private void ChangeColor()
+    private void ChangeColor() //색 교체
     {
         Renderer renderer = GetComponent<Renderer>();
         if (renderer != null)
         {
             renderer.material.color = new Color(0.5f, 0.0f, 0.7f);
-            Debug.Log("색상이 보라색으로 변경되었습니다.");
-        }
-        else
-        {
-            Debug.LogWarning("Renderer가 없습니다. 색상을 변경할 수 없습니다.");
         }
     }
 

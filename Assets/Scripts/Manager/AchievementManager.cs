@@ -64,7 +64,7 @@ public class AchievementManager : Singleton<AchievementManager>
         AddAchievement(new Achievement("탈출..? 응 아니야 내일 또 와야해", 9, 0, EAchievementCode.PassSuccess, "Sprites/Exit"));
         AddAchievement(new Achievement("그냥 계속 여기 있으세요", 3, 0, EAchievementCode.PassFail, "Sprites/Exitfail"));
         AddAchievement(new Achievement("이 업적 못깨면 나갈 마음이 없었던거다", 0, 15, EAchievementCode.TimeAttack, "Sprites/Time"));
-        AddAchievement(new Achievement("매니저님..저 아직 12시간 못채웠어요", 1, 0, EAchievementCode.AudioClip, "Sprites/ManagerFace"));
+        AddAchievement(new Achievement("...저 아직 12시간 못채웠어요", 1, 0, EAchievementCode.AudioClip, "Sprites/ManagerFace"));
         AddAchievement(new Achievement("불좀 꺼줄래? 나,여기서 그냥 잘라고", 1, 0, EAchievementCode.Lighting, "Sprites/Light"));
     }
     public void ShowAchievementUI(Achievement achievement)

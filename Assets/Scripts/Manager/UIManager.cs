@@ -9,7 +9,7 @@ public class UIManager : Singleton<UIManager>
     
     public TextMeshProUGUI timeText;
     
-    public void UINumberUpdate()
+    public void UINumberUpdate() //층수 UI 업데이트
     {
         string floor = TriggerManager.Instance.currentfloor.ToString();
         numberText.text = floor;

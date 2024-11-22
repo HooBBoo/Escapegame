@@ -40,7 +40,6 @@ using UnityEngine;
     {
         StartCoroutine(OffLightsCoroutine());
         AchievementManager.Instance.IncreseAchievement(EAchievementCode.Lighting);
-        Debug.Log("OffLights");
     }
 
     private IEnumerator OffLightsCoroutine()
@@ -68,7 +67,6 @@ using UnityEngine;
     
     public void NoChange()
     {
-        Debug.Log("NoChange");
         return;
     }
 }

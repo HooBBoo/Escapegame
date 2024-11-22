@@ -32978,7 +32978,7 @@ MonoBehaviour:
     audioCategory: 1
     clip: {fileID: 8300000, guid: f931db9b7328c644b90f26085ac36338, type: 3}
   - eventName: Walking
-    audioCategory: 1
+    audioCategory: 0
     clip: {fileID: 8300000, guid: a03e77bc499ab904d95d5bf6fd27d5c1, type: 3}
 --- !u!64 &9011445959492055526
 MeshCollider:

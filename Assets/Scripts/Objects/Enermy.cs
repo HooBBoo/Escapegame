@@ -33,6 +33,7 @@ public class Enermy : Object
     {
         EventBus.Publish("ManagerSound");
         StartCoroutine(PlayLongSound());
+        
     }
 
     public void NoChange()
@@ -45,10 +46,10 @@ public class Enermy : Object
         yield return new WaitForSeconds(2f); 
         EventBus.Publish("ManagerLongSound");
         yield return new WaitForSeconds(3f); 
+        AchievementManager.Instance.IncreseAchievement(EAchievementCode.AudioClip);
         EventBus.Publish("ManagerSound");
         yield return new WaitForSeconds(2f); 
         EventBus.Publish("ManagerLongSound");
-        yield return new WaitForSeconds(3f); 
-        EventBus.Publish("ManagerSound");
+       
     }
 }

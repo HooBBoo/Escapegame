@@ -14,7 +14,7 @@ public class Socket : Object
         }
     }
  
-    private void SetActive()
+    private void SetActive() //삭제
     {
         gameObject.SetActive(false);
 
