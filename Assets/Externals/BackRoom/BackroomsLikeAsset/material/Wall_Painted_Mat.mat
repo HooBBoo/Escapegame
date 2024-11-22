@@ -13,7 +13,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHATEST_ON
-  - _ALPHATEST_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
@@ -67,16 +66,16 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _CastShadows: 1
-    - _ColorOverlayOpacity: 0
+    - _ColorOverlayOpacity: 0.444
     - _Cull: 2
     - _CustomColor: 1
     - _DstBlend: 0
     - _Metallic: 0
-    - _Normal_Strength: 1
+    - _Normal_Strength: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.33
+    - _Smoothness: 0.232
     - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 1
