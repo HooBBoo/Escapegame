@@ -52,8 +52,8 @@ public class PlayerController : MonoBehaviour
         float currentSpeed = isRunning ? runSpeed : moveSpeed;
         Vector3 dir = transform.forward * curMovementInput.y + transform.right * curMovementInput.x;
         dir *= currentSpeed;
-        dir.y = _rigidbody.velocity.y;
-        _rigidbody.velocity = dir;
+        dir.y = _rigidbody.linearVelocity.y;
+        _rigidbody.linearVelocity = dir;
     }
 
     public void OnLook(InputAction.CallbackContext context)
